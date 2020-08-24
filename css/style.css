@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+  color: white;
+}
+
+p {
+  font-size: 16px;
+  color: white;
+}
+
+label {
+  display: block;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  display: block;
+}
+
+select {
+  border: 2px solid #2a2e34;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 60px;
+  line-height: 60px;
+  background-color: transparent;
+  color: white;
+  padding: 0 20px;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input {
+  padding-bottom: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #2a2e34;
+  border-image: none;
+}
+
+input:focus {
+  border-bottom: 1px solid #ffcd4e;
+  outline: none;
+}
+
+input::placeholder {
+  color: #828282;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffcd4e;
+  text-decoration: none;
+}
+
+a.--active {
+  color: #ffcd4e;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* =======Common========== */
+
+/* Format Text */
+.text-yellow {
+  color: #ffcd4e;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Col layout */
+
+.app-col {
+  width: 100%;
+}
+
+.app-col-half {
+  width: 50%;
+}
+
+.app-col-oneThree {
+  width: 33.33%;
+}
+
+.app-group--center {
+  justify-content: space-between;
+}
+
+/* Button */
+
+.app-button {
+  background: #ffcd4e;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Form */
+
+.app-group {
+  display: flex;
+  align-items: center;
+}
+
+.app-form label {
+  margin: 20px 0 10px;
+}
+
+.app-submit {
+  margin-top: 59px;
+  height: 45px;
+  line-height: 45px;
+  color: #22252a;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 17px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Main App */
+
+.app {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+  background-color: #22252a;
+  max-width: 375px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.app-header {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-time {
+  color: white;
+  font-weight: bold;
+}
+
+.app-title {
+  font-size: 25px;
+  line-height: 29px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.app-body {
+  overflow-y: auto;
+  width: 100%;
+  height: calc(100% - (58px + 44px));
+}
+
+.app-menu {
+  position: absolute;
+  width: 100%;
+  height: 58px;
+  display: flex;
+  padding: 0 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 9px;
+  padding-bottom: 14px;
+}
+
+.menu-name {
+  font-size: 10px;
+}
+
+.square {
+  width: 4px;
+  height: 4px;
+  background: #ffcd4e;
+  margin-top: auto;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-icon {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Nav */
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-name {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 9px 0 16px;
+}
+
+.nav-noti {
+  position: relative;
+}
+
+.nav-noti::after {
+  content: "1";
+  width: 12px;
+  height: 12px;
+  display: block;
+  font-size: 10px;
+  color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffcd4e;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 13px;
+}
+
+/* Margin */
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Welcome */
+
+.app-welcome {
+  background-image: url("../img/bg-welcome.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.app-welcome .app-logo {
+  margin-top: 160px;
+  text-align: center;
+}
+
+/* Login */
+
+.app-login .app-title {
+  margin-top: 98px;
+}
+
+/* Register */
+
+.app-button.getCode {
+  height: 40px;
+  line-height: 40px;
+  background: #2a2e34;
+  font-size: 14px;
+  font-weight: bold;
+  color: #828282;
+  display: block;
+  width: 90px;
+}
+
+.getCode:hover {
+  background-color: #ffcd4e;
+  color: white;
+}
+
+.app-register .app-form .group-input .input-row-button .input-row-left {
+  width: calc(100% - 115px);
+}
+
+.app-register .app-form .group-input .input-row-qr .input-row-left {
+  width: calc(100% - 89px);
+}
+
+.qrCode {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #2a2e34;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrCode img {
+  width: 47px;
+  height: 47px;
+}
+
+/* Home */
+
+.app-info {
+  background: #3e4248;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  padding: 9px 23px 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.info-bar-1 {
+  width: 183px;
+  height: 1.5px;
+  background: linear-gradient(89.99deg, #9e9e9e -2.13%, #3e4248 105.67%);
+  margin-bottom: 6px;
+}
+
+.info-bar-2 {
+  width: 93px;
+  height: 1.5px;
+  background: linear-gradient(89.99deg, #9e9e9e -2.13%, #3e4248 105.67%);
+  margin-bottom: 6.5px;
+}
+
+.info-total-value {
+  display: flex;
+}
+
+.info-total {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.info-total-value {
+  display: flex;
+  align-items: center;
+}
+
+.currency-icon {
+  margin-right: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-color: #ffcd4e;
+  font-weight: bold;
+  font-size: 13px;
+  color: #3e4248;
+  text-align: center;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
+}
+
+.currency-num {
+  font-weight: bold;
+  font-size: 24px;
+}
